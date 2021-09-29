@@ -1,4 +1,7 @@
 # tucker code refactor
 
-01 - day 1
-02 - adding some development
+uh oh it's a system now
+
+live demo:
+https://socalledsound.github.io/tucker-thing/
+
