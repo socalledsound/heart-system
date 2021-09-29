@@ -22,7 +22,7 @@ class HeartSystem{
                 
             circle.x = x
             const y = easeInOutQuart(time, originalCircles[idx].y, this.points[idx].y - originalCircles[idx].y, duration);
-            
+            //
             circle.y = y
             }) 
             if (time >= duration) {
