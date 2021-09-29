@@ -20,10 +20,10 @@ class HeartSystem{
                 meta.rotValue -= 0.1
                 const x = easeInOutQuart(time, originalCircles[idx].x, this.points[idx].x - originalCircles[idx].x, duration);
                 
-            circle.x = x
-            const y = easeInOutQuart(time, originalCircles[idx].y, this.points[idx].y - originalCircles[idx].y, duration);
-            //
-            circle.y = y
+                circle.x = x
+                const y = easeInOutQuart(time, originalCircles[idx].y, this.points[idx].y - originalCircles[idx].y, duration);
+                //
+                circle.y = y
             }) 
             if (time >= duration) {
                 clearInterval(timer);
