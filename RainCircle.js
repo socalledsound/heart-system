@@ -1,4 +1,4 @@
-
+// this is the thing I made in class
 class RainCircle {
     constructor(x, y, r, color){
         this.x = x
@@ -16,12 +16,15 @@ class RainCircle {
     render(){
         // console.log(this.alpha)
         noStroke();
+        // i seperated out the alpha value to make it easier to change it
         fill(this.color.concat(this.alpha));
         ellipse(this.x, this.y, this.r);
     }
 
     update(){
+        // move the circle around
         this.move()
+        // increase the opacity sometimes
         if(Math.random() > 0.99){
             // console.log(this.alpha)
             if(this.alpha < 255){
