@@ -15,7 +15,8 @@ function draw() {
     }else {
         background(120)
     }
-    
+    translate(heartSettings.cX, heartSettings.cY)
+    rotate(PI + meta.rotValue)
     meta.update()
     meta.render()
 

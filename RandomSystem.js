@@ -9,7 +9,7 @@ class RandomSystem {
     }
 
 
-    untweenCircles(){
+    untweenCircles(meta){
         console.log('here I am')
         const start = new Date().getTime();
         const duration = 1000
@@ -20,6 +20,7 @@ class RandomSystem {
             this.circles.forEach((circle, idx) => {
             
                 circle.alpha -=1.25
+                meta.rotValue += 0.01
                 const x = easeInOutQuart(time, originalCircles[idx].x, this.randomPositions[idx].x - originalCircles[idx].x, duration);
             
             circle.x = x
@@ -27,7 +28,11 @@ class RandomSystem {
             
             circle.y = y
             }) 
-            if (time >= duration) clearInterval(timer);
+            if (time >= duration) {
+                clearInterval(timer);
+                meta.rotValue = 0.1
+                meta.tweening = false
+            }
           }, 10); 
     }
 
